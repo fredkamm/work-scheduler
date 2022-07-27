@@ -20,3 +20,13 @@
 // hard cope the 9-5 time blocks
 // so each row is unique and button is unique
 // add 3 bootstrap sections, adjust size of the columns 
+
+var currentDayEl = $('#currentDay');
+
+// displaying the current date and time
+function displayTime() {
+    var rightNow = moment().format('dddd MMMM Do');
+    currentDayEl.text(rightNow);
+
+}
+displayTime();
