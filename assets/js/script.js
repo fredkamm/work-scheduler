@@ -203,19 +203,6 @@ function past17(){
 }
 past17();
 
-
-// function to saving the inputs to local storage
-// function saveInput() {
-//     localStorage.setItem('hour-9', $(workListEl1.val()));
-
-//     inputBtn1.on ('click', saveInput);
-// }
-
-// function getInput(){
-//     $()
-// }
-//     // localStorage.setItem('<textarea>', workListEl1);
-
 // the multiple lines of functions below save the textarea input to local storage
 // again theres got to be a better way to do this but im happy that its just working right now
 function saveInput1(){
@@ -272,5 +259,59 @@ function saveInput9(){
     localStorage.setItem('hour-5', JSON.stringify(workListEl9.val()));
 }
 inputBtn1.on('click', saveInput9);
+    
+// saving the text to the page after reload
+// however the strings are included, im sure its a small fix that im not sure about.
+// im not sure why but hour-5 is not saving to the page but saves to local storage?
+var hour9Block = localStorage.getItem("hour-9");
+    if (hour9Block){
+        workListEl1.val(hour9Block);
+    };
+
+var hour10Block = localStorage.getItem("hour-10");
+    if (hour10Block){
+        workListEl2.val(hour10Block);
+    };
+    
+var hour11Block = localStorage.getItem("hour-11");
+    if (hour11Block){
+        workListEl3.val(hour11Block);
+    };
+
+var hour12Block = localStorage.getItem("hour-12");
+    if (hour12Block){
+        workListEl4.val(hour12Block);
+    };
+
+var hour1Block = localStorage.getItem("hour-1");
+    if (hour1Block){
+        workListEl5.val(hour1Block);
+    };
+
+var hour2Block = localStorage.getItem("hour-2");
+    if (hour2Block){
+        workListEl6.val(hour2Block);
+    };
+
+var hour3Block = localStorage.getItem("hour-3");
+    if (hour3Block){
+        workListEl7.val(hour3Block);
+    };
+
+var hour4Block = localStorage.getItem("hour-4");
+    if (hour4Block){
+        workListEl7.val(hour4Block);
+    };
+
+var hour5Block = localStorage.getItem("hour-5");
+    if (hour5Block){
+        workListEl8.val(hour5Block);
+    };
+
+
+
+
+
+
     
 
