@@ -32,15 +32,15 @@ var inputBtn8 = $('#saveBtn8');
 var inputBtn9 = $('#saveBtn9');
 
 // textarea variables
-var workListEl1 = $('#hour-9');
-var workListEl2 = $('#hour-10');
-var workListEl3 = $('#hour-11');
-var workListEl4 = $('#hour-12');
-var workListEl5 = $('#hour-1');
-var workListEl6 = $('#hour-2');
-var workListEl7 = $('#hour-3');
-var workListEl8 = $('#hour-4');
-var workListEl9 = $('#hour-5');
+var workListEl1 = $('textarea[name="hour-9"]');
+var workListEl2 = $('textarea[name="hour-10"]');
+var workListEl3 = $('textarea[name="hour-11"]');
+var workListEl4 = $('textarea[name="hour-12"]');
+var workListEl5 = $('textarea[name="hour-1"]');
+var workListEl6 = $('textarea[name="hour-2"]');
+var workListEl7 = $('textarea[name="hour-3"]');
+var workListEl8 = $('textarea[name="hour-4"]');
+var workListEl9 = $('textarea[name="hour-5"]');
 
 // each row variable
 var hour9 = $('#rowOne');
@@ -204,18 +204,27 @@ function past17(){
 past17();
 
 
+// function to saving the inputs to local storage
+// function saveInput() {
+//     localStorage.setItem('hour-9', $(workListEl1.val()));
+
+//     inputBtn1.on ('click', saveInput);
+// }
+
+// function getInput(){
+//     $()
+// }
+//     // localStorage.setItem('<textarea>', workListEl1);
 
 
-// // function to saving the inputs to local storage
-// function saveInput(){
-//     inputBtn1.addEventListener('click', function(){
-//         if(workListEl1 = "hi");
-//         window.alert("hi)");
+function saveInput1(){
+
+    localStorage.setItem('hour-9', JSON.stringify(workListEl1.val()));
+}
+
+function setInput1(){
+    localStorage.getItem('hour-9');
     
-//         localStorage.setItem('hour-9', workListEl1 )
-//     });
-// }
-//     localStorage.setItem('<textarea>', workListEl1);
-// }
+}
 
-// console.log(saveInput)
+inputBtn1.on('click', saveInput1, setInput1);
