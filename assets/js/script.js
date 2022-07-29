@@ -78,7 +78,7 @@ function displayTime() {
 displayTime();
 
 // next 9 functions are what makes the column change color with time
-// im sure theres an easier/cleaner way to loop this but its working as i want.
+// im sure theres an easier/cleaner way to loop this but its working so ill take it
 function past9(){
     if (hour9 < hour) {
         workListEl1.attr("style", 'background-color: lightgrey');
@@ -216,15 +216,58 @@ past17();
 // }
 //     // localStorage.setItem('<textarea>', workListEl1);
 
-
+// the multiple lines of functions below save the textarea input to local storage
+// again theres got to be a better way to do this but im happy that its just working right now
 function saveInput1(){
 
     localStorage.setItem('hour-9', JSON.stringify(workListEl1.val()));
 }
+inputBtn1.on('click', saveInput1);
 
-function setInput1(){
-    localStorage.getItem('hour-9');
-    
+function saveInput2(){
+
+    localStorage.setItem('hour-10', JSON.stringify(workListEl2.val()));
 }
+inputBtn1.on('click', saveInput2);
 
-inputBtn1.on('click', saveInput1, setInput1);
+function saveInput3(){
+
+    localStorage.setItem('hour-11', JSON.stringify(workListEl3.val()));
+}
+inputBtn1.on('click', saveInput3);
+
+function saveInput4(){
+
+    localStorage.setItem('hour-12', JSON.stringify(workListEl4.val()));
+}
+inputBtn1.on('click', saveInput4);
+
+function saveInput5(){
+
+    localStorage.setItem('hour-1', JSON.stringify(workListEl5.val()));
+}
+inputBtn1.on('click', saveInput5);
+
+function saveInput6(){
+
+    localStorage.setItem('hour-2', JSON.stringify(workListEl6.val()));
+}
+inputBtn1.on('click', saveInput6);
+
+function saveInput7(){
+
+    localStorage.setItem('hour-3', JSON.stringify(workListEl7.val()));
+}
+inputBtn1.on('click', saveInput7);
+
+function saveInput8(){
+
+    localStorage.setItem('hour-4', JSON.stringify(workListEl8.val()));
+}
+inputBtn1.on('click', saveInput8);
+
+function saveInput9(){
+
+    localStorage.setItem('hour-5', JSON.stringify(workListEl9.val()));
+}
+inputBtn1.on('click', saveInput9);
